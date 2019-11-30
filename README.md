@@ -50,7 +50,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: aymericdd.lgsm }
+         - { role: aymericdd.linuxgsm }
 
 License
 -------
