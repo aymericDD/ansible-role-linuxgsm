@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: LinuxGSM
+  author: aymericdd
+  description: Ansible role LinuxGSM
+  license: bsd
+  min_ansible_version: 2.7
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+
+  galaxy_tags:
+    - games
+
+dependencies: []

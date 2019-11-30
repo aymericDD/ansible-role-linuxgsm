@@ -1,0 +1,3 @@
+---
+# vars file for ansible-role-linuxgsm
+lgsm_version: 19.12.0

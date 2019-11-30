@@ -1,0 +1,42 @@
+---
+# tasks file for ansible-role-linuxgsm
+- name: Install LGSM dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop: "{{ lgsm_dependencies }}"
+  become: True
+
+- name: Ensure LGSM Server Group exists
+  group:
+    name: "{{ lgsm_group }}"
+    system: yes
+  become: True
+
+- name: Ensure LGSM Server user exists
+  user:
+    name: "{{ lgsm_user }}"
+    group: "{{ lgsm_group }}"
+    system: yes
+  become: True
+
+- name: Copy Linux GSM
+  unarchive:
+    src: "files/LinuxGSM-{{ lgsm_version }}.tar.gz"
+    dest: /opt
+    owner: "{{ lgsm_user }}"
+    group: "{{ lgsm_group }}"
+    mode: u=rwX,g=rX,o=rX
+    creates: /opt/LinuxGSM-{{ lgsm_version }}/
+  become: True
+
+- name: Create a symbolic link
+  file:
+    src: /opt/LinuxGSM-{{ lgsm_version }}/linuxgsm.sh
+    dest: /usr/local/bin/linuxgsm.sh
+    owner: "{{ lgsm_user }}"
+    group: "{{ lgsm_group }}"
+    state: link
+    mode: 0o550
+  become: True
