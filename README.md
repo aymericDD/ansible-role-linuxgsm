@@ -1,7 +1,7 @@
 Ansible Role: LinuxGSM
 =========
 
-[![Build Status](https://travis-ci.com/aymericDD/ansible-role-linuxgsm.svg?branch=master)](https://travis-ci.com/aymericDD/ansible-role-linuxgsm)
+[![Build Status](https://github.com/aymericdd/ansible-role-linuxgsm/workflows/CI/badge.svg?event=push)](https://github.com/aymericdd/ansible-role-linuxgsm/actions?query=workflow%3ACI)
 [![test-suite](https://img.shields.io/badge/ansible--roles--linuxgsm-tests-ansible--role--linuxgsm.svg?style=flat)](https://github.com/aymericDD/ansible-role-linuxgsm/tree/master/molecule/default)
 [![Ansible
 Galaxy](https://img.shields.io/badge/galaxy-aymericdd.linuxgsm-660198.svg?style=flat)](https://galaxy.ansible.com/aymericdd/linuxgsm)
