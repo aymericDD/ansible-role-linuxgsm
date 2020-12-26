@@ -1,6 +1,8 @@
 ---
 language: python
 services: docker
+python:
+  - "3.8"
 
 env:
   global:
@@ -9,11 +11,11 @@ env:
 install:
   # Install test dependencies.
   - pip install pipenv
-  - pipenv install
+  - pipenv sync
 
 script:
   # Run tests.
-  - molecule test
+  - pipenv run molecule test
 
 after_script:
   # Use actual Ansible Galaxy role name for the project directory.

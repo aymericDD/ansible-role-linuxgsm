@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: LinuxGSM
+  role_name: linuxgsm
   author: aymericdd
   description: Ansible role LinuxGSM
   license: bsd
@@ -10,6 +10,7 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
+        - stretch
 
   galaxy_tags:
     - games

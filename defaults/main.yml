@@ -1,23 +1,23 @@
 ---
 # defaults file for ansible-role-linuxgsm
 lgsm_dependencies:
-  - mailutils 
-  - postfix 
-  - curl 
-  - wget 
-  - file 
-  - tar 
-  - bzip2 
-  - gzip 
-  - unzip 
-  - bsdmainutils 
-  - python 
-  - util-linux 
-  - ca-certificates 
-  - binutils 
-  - bc 
-  - jq 
-  - tmux 
+  - mailutils
+  - postfix
+  - curl
+  - wget
+  - file
+  - tar
+  - bzip2
+  - gzip
+  - unzip
+  - bsdmainutils
+  - python
+  - util-linux
+  - ca-certificates
+  - binutils
+  - bc
+  - jq
+  - tmux
   - default-jre
 
 lgsm_user: "lgsm"
